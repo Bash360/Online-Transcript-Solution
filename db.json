@@ -1,19 +1,147 @@
 {
-  "posts": [
+  "users": [
     {
-      "id": 1,
-      "title": "json-server",
-      "author": "typicode"
-    }
-  ],
-  "comments": [
+      "password": "PtZhG78Tk8gx575",
+      "compare_password": "ddffeef",
+      "id": 1
+    },
     {
-      "id": 1,
-      "body": "some comment",
-      "postId": 1
+      "fullname": "John Doe",
+      "password": "PtZhG78Tk8gx575",
+      "compare_password": "PtZhG78Tk8gx575",
+      "id": 2
+    },
+    {
+      "fullname": "John Doe",
+      "password": "PtZhG78Tk8gx575",
+      "compare_password": "PtZhG78Tk8gx575",
+      "id": 3
+    },
+    {
+      "fullname": "John Doe",
+      "password": "PtZhG78Tk8gx575",
+      "compare_password": "PtZhG78Tk8gx575",
+      "id": 4
+    },
+    {
+      "fullname": "John Doe",
+      "password": "PtZhG78Tk8gx575",
+      "compare_password": "hhjbkj",
+      "id": 5
+    },
+    {
+      "fullname": "John Doe",
+      "password": "PtZhG78Tk8gx575",
+      "compare_password": "ghth",
+      "id": 6
+    },
+    {
+      "fullname": "",
+      "password": "PtZhG78Tk8gx575",
+      "compare_password": "",
+      "id": 7
+    },
+    {
+      "fullname": "John Doe",
+      "password": "PtZhG78Tk8gx575",
+      "compare_password": "wffe3f",
+      "id": 8
+    },
+    {
+      "fullname": "",
+      "password": "PtZhG78Tk8gx575",
+      "compare_password": "",
+      "id": 9
+    },
+    {
+      "fullname": "John Doe",
+      "password": "PtZhG78Tk8gx575",
+      "compare_password": "fegeg",
+      "id": 10
+    },
+    {
+      "fullname": "",
+      "password": "PtZhG78Tk8gx575",
+      "compare_password": "",
+      "id": 11
+    },
+    {
+      "fullname": "",
+      "password": "PtZhG78Tk8gx575",
+      "compare_password": "",
+      "id": 12
+    },
+    {
+      "fullname": "",
+      "password": "",
+      "compare_password": "",
+      "id": 13
+    },
+    {
+      "fullname": "",
+      "password": "PtZhG78Tk8gx575",
+      "compare_password": "",
+      "id": 14
+    },
+    {
+      "fullname": "",
+      "password": "",
+      "compare_password": "",
+      "id": 15
+    },
+    {
+      "fullname": "",
+      "password": "PtZhG78Tk8gx575",
+      "compare_password": "",
+      "id": 16
+    },
+    {
+      "fullname": "",
+      "password": "PtZhG78Tk8gx575",
+      "compare_password": "",
+      "id": 17
+    },
+    {
+      "fullname": "",
+      "password": "PtZhG78Tk8gx575",
+      "compare_password": "",
+      "id": 18
+    },
+    {
+      "fullname": "",
+      "password": "PtZhG78Tk8gx575",
+      "compare_password": "",
+      "id": 19
+    },
+    {
+      "fullname": "",
+      "password": "PtZhG78Tk8gx575",
+      "compare_password": "",
+      "id": 20
+    },
+    {
+      "fullname": "",
+      "password": "PtZhG78Tk8gx575",
+      "compare_password": "",
+      "id": 21
+    },
+    {
+      "fullname": "peter",
+      "password": "PtZhG78Tk8gx575",
+      "compare_password": "ghhhjjjuj",
+      "id": 22
+    },
+    {
+      "fullname": "peter",
+      "password": "PtZhG78Tk8gx575",
+      "compare_password": "PtZhG78Tk8gx575",
+      "id": 23
+    },
+    {
+      "fullname": "peteroooo",
+      "password": "PtZhG78Tk8gx575",
+      "compare_password": "PtZhG78Tk8gx575",
+      "id": 24
     }
-  ],
-  "profile": {
-    "name": "typicode"
-  }
+  ]
 }
