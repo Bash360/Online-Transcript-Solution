@@ -1,7 +1,14 @@
 function calculate(grades){
     let CGPA=[];
-    let unit=3;
+    let courseUnit=3;
+    let sumPerSession=0;
+    let count=0
     for(counter=0;counter<grades.length;counter++){
- coursePoint=unit*grades[counter].point
+ sumPerSession+=grades[counter].point*courseUnit;
+ count++;
+ if(count%12==0){
+    CGPA.push(sumPerSession/36*3);
+ }
+ 
     }
 }
