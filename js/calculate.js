@@ -12,3 +12,27 @@ function calculate(grades){
  
     }
 }
+function determineClass(CGPA){
+    let finalResult={};
+    if(CGPA>=4.5 && CGPA<=5.0){
+        finalResult["gradePoint"]=CGPA;
+        finalResult["class"]="First Class";
+
+    }else if(CGPA>=3.5 && CGPA<=4.49){
+        finalResult["gradePoint"]=CGPA;
+        finalResult["class"]="Second Class Upper";
+
+    }else if(CGPA>=2.5 && CGPA<=3.49){
+        finalResult["gradePoint"]=CGPA;
+        finalResult["class"]="Second Class Lower";
+
+    }
+    else if(CGPA>=1.5 && CGPA<=2.49){
+        finalResult["gradePoint"]=CGPA;
+        finalResult["class"]="Third Class";
+
+    }else{
+            finalResult["gradePoint"]=CGPA;
+            finalResult["class"]="Pass"; 
+    }
+}
