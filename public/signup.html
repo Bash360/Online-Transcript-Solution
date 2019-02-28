@@ -22,7 +22,7 @@
 <body>
 <div id="signup_container">
 	<div class="d-flex justify-content-center h-100">
-		<div class="card height">
+		<div class="card height-550">
 			<div class="card-header">
 				<h3>Registration</h3>
 			</div>
@@ -38,19 +38,76 @@
 						<div class="input-group-prepend">
 							<span class="input-group-text"><i class="fas fa-user"></i></span>
 						</div>
+						<input type="email" id="email" class="form-control" placeholder="Email" required=true />
+					</div>
+
+
+					<div class="input-group form-group">
+						<div class="input-group-prepend">
+							<span class="input-group-text"><i class="fas fa-user"></i></span>
+						</div>
 						<input type="text" id="student_id" class="form-control" placeholder="StudentID No." required>
 					</div>
+
+
+
+
+
+					<div class="input-group form-group">
+						<div class="input-group-prepend">
+							<span class="input-group-text"><i class="fas fa-user"></i></span>
+						</div>
+						<select id="dept" type="select" name="Departments">
+							<option value="CSC">Computer Science</option>
+							<option value="ICT">Information Technology</option>
+							<option value="ENG">Computer Engineering</option>
+						</select>
+					</div>
+
+
+					
+
+
+
+
+					<div class="input-group form-group">
+						<div class="input-group-prepend">
+							<span class="input-group-text"><i class="fas fa-user"></i></span>
+						</div>
+						<select id="yoe" type="select" class="select_input" name="Year of Entry">
+							<option value="2012/2013">2012/2013</option>
+							<option value="2013/2014">2013/2014</option>
+							<option value="2015/2016">2015/2016</option>
+						</select>
+					</div>
+
+
+
+					
+
+
+
+
+					<div class="input-group form-group">
+						<div class="input-group-prepend">
+							<span class="input-group-text"><i class="fas fa-key"></i></span>
+						</div>
+						<select id="yog" type="select" name="Year of Graduation">
+							<option value="2016/2017">2016/2017</option>
+							<option value="2017/2018">2017/2018</option>
+							<option value="2018/2019">2018/2019</option>
+						</select>
+					</div>
+
+
+
+
+
 					<div class="input-group form-group">
 						<div class="input-group-prepend">
 							<span class="input-group-text"><i class="fas fa-key"></i></span>
 						</div>
 						<input type="password" id="password" class="form-control" placeholder="Password" required>
-					</div>
-					<div class="input-group form-group">
-						<div class="input-group-prepend">
-							<span class="input-group-text"><i class="fas fa-key"></i></span>
-						</div>
-						<input type="password" id="compare_password" class="form-control" placeholder="Re-enter password" required>
 					</div>
 					<div class="form-group">
 						<input type="submit" id="button" value="Signup" class="btn float-right login_btn">
@@ -68,6 +125,6 @@
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
-<script src="js/index.js"></script>
+<script src="js/script.js"></script>
 </body>
 </html>

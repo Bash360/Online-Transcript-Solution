@@ -1,159 +1,65 @@
 {
   "users": [
     {
-      "password": "PtZhG78Tk8gx575",
-      "compare_password": "ddffeef",
+      "fullname": "dhdhdh",
+      "email": "dhdhd@dhgfh.com",
+      "password": "dhdfhfhj",
       "id": 1
     },
     {
-      "fullname": "John Doe",
-      "password": "PtZhG78Tk8gx575",
-      "compare_password": "PtZhG78Tk8gx575",
+      "fullname": "dhdhdhjd",
+      "email": "dhdhdhj@hfhf.com",
+      "student_id": "999999",
+      "password": "fhfjhf",
       "id": 2
     },
     {
-      "fullname": "John Doe",
-      "password": "PtZhG78Tk8gx575",
-      "compare_password": "PtZhG78Tk8gx575",
+      "fullname": "dhdhdhjdhjd",
+      "email": "dghhgdhhd@gmaild.cofo",
+      "student_id": "9999999",
+      "password": "djfkjfjf",
       "id": 3
     },
     {
-      "fullname": "John Doe",
-      "password": "PtZhG78Tk8gx575",
-      "compare_password": "PtZhG78Tk8gx575",
+      "fullname": "shdhdh",
+      "email": "dnhddh@gdfg.cojm",
+      "student_id": "00000",
+      "password": "dfhjfujrf",
       "id": 4
     },
     {
-      "fullname": "John Doe",
-      "password": "PtZhG78Tk8gx575",
-      "compare_password": "hhjbkj",
+      "fullname": "fufufiurf",
+      "email": "fjfju@fdjf.om",
+      "student_id": "99999",
+      "department": "CSC",
+      "password": "dghdfhfdh",
       "id": 5
     },
     {
-      "fullname": "John Doe",
-      "password": "PtZhG78Tk8gx575",
-      "compare_password": "ghth",
+      "fullname": "jfjfjfjff",
+      "email": "dndjhd@fhfj.cicd",
+      "student_id": "000000007",
+      "department": "ICT",
+      "password": "dnjndjd",
       "id": 6
     },
     {
-      "fullname": "",
-      "password": "PtZhG78Tk8gx575",
-      "compare_password": "",
+      "fullname": "DHDHDH",
+      "email": "DHDH@fgfg.cofjmf",
+      "student_id": "6776868",
+      "department": "ENG",
+      "password": "ehdjhdj",
       "id": 7
     },
     {
-      "fullname": "John Doe",
-      "password": "PtZhG78Tk8gx575",
-      "compare_password": "wffe3f",
+      "fullname": "fhfjfjfjf",
+      "email": "fjfjfj@gjgj.com",
+      "student_id": "7879879",
+      "department": "ENG",
+      "yearOfEntry": "2012/2013",
+      "yearOfGraduation": "2017/2018",
+      "password": "dhdhdhdd",
       "id": 8
-    },
-    {
-      "fullname": "",
-      "password": "PtZhG78Tk8gx575",
-      "compare_password": "",
-      "id": 9
-    },
-    {
-      "fullname": "John Doe",
-      "password": "PtZhG78Tk8gx575",
-      "compare_password": "fegeg",
-      "id": 10
-    },
-    {
-      "fullname": "",
-      "password": "PtZhG78Tk8gx575",
-      "compare_password": "",
-      "id": 11
-    },
-    {
-      "fullname": "",
-      "password": "PtZhG78Tk8gx575",
-      "compare_password": "",
-      "id": 12
-    },
-    {
-      "fullname": "",
-      "password": "",
-      "compare_password": "",
-      "id": 13
-    },
-    {
-      "fullname": "",
-      "password": "PtZhG78Tk8gx575",
-      "compare_password": "",
-      "id": 14
-    },
-    {
-      "fullname": "",
-      "password": "",
-      "compare_password": "",
-      "id": 15
-    },
-    {
-      "fullname": "",
-      "password": "PtZhG78Tk8gx575",
-      "compare_password": "",
-      "id": 16
-    },
-    {
-      "fullname": "",
-      "password": "PtZhG78Tk8gx575",
-      "compare_password": "",
-      "id": 17
-    },
-    {
-      "fullname": "",
-      "password": "PtZhG78Tk8gx575",
-      "compare_password": "",
-      "id": 18
-    },
-    {
-      "fullname": "",
-      "password": "PtZhG78Tk8gx575",
-      "compare_password": "",
-      "id": 19
-    },
-    {
-      "fullname": "",
-      "password": "PtZhG78Tk8gx575",
-      "compare_password": "",
-      "id": 20
-    },
-    {
-      "fullname": "",
-      "password": "PtZhG78Tk8gx575",
-      "compare_password": "",
-      "id": 21
-    },
-    {
-      "fullname": "peter",
-      "password": "PtZhG78Tk8gx575",
-      "compare_password": "ghhhjjjuj",
-      "id": 22
-    },
-    {
-      "fullname": "peter",
-      "password": "PtZhG78Tk8gx575",
-      "compare_password": "PtZhG78Tk8gx575",
-      "id": 23
-    },
-    {
-      "fullname": "peteroooo",
-      "password": "PtZhG78Tk8gx575",
-      "compare_password": "PtZhG78Tk8gx575",
-      "id": 24
-    },
-    {
-      "fullname": "John Doe",
-      "password": "PtZhG78Tk8gx575",
-      "compare_password": "PtZhG78Tk8gx575",
-      "id": 25
-    },
-    {
-      "fullname": "peter",
-      "password": "PtZhG78Tk8gx575",
-      "compare_password": "PtZhG78Tk8gx575",
-      "id": 26
     }
   ]
 }
