@@ -1,76 +1,8 @@
 {
-  "users": [
-    {
-      "email": "bl-admin@example.com",
-      "admin_id": "3322",
-      "password": "PtZhG78Tk8gx575",
-      "id": 1
-    },
-    {
-      "fullname": "john doe",
-      "email": "bl-admin@example.com",
-      "student_id": "33333",
-      "department": "ICT",
-      "yearOfEntry": "2015/2016",
-      "yearOfGraduation": "2018/2019",
-      "password": "PtZhG78Tk8gx575",
-      "id": 2
-    },
-    {
-      "fullname": "Nomolos",
-      "email": "boscoseries@gmail.com",
-      "student_id": "00000",
-      "department": "ENG",
-      "yearOfEntry": "2012/2013",
-      "yearOfGraduation": "2016/2017",
-      "password": "passwoerd",
-      "id": 3
-    },
-    {
-      "fullname": "Ben",
-      "email": "bl-admin@example.com",
-      "student_id": "10101",
-      "department": "CSC",
-      "yearOfEntry": "2012/2013",
-      "yearOfGraduation": "2016/2017",
-      "password": "PtZhG78Tk8gx575",
-      "id": 4
-    },
-    {
-      "fullname": "Faith",
-      "email": "bl-admin@example.com",
-      "student_id": "90909",
-      "department": "CSC",
-      "yearOfEntry": "2012/2013",
-      "yearOfGraduation": "2016/2017",
-      "password": "PtZhG78Tk8gx575",
-      "id": 5
-    },
-    {
-      "fullname": "snjsjs",
-      "email": "bl-admin@example.com",
-      "student_id": "99999",
-      "department": "CSC",
-      "yearOfEntry": "2012/2013",
-      "yearOfGraduation": "2016/2017",
-      "password": "PtZhG78Tk8gx575",
-      "id": 6
-    },
-    {
-      "fullname": "sbhshsdhjds",
-      "email": "bl-admin@example.com",
-      "student_id": "99999",
-      "department": "CSC",
-      "yearOfEntry": "2012/2013",
-      "yearOfGraduation": "2016/2017",
-      "password": "PtZhG78Tk8gx575",
-      "id": 7
-    },
-    {
-      "email": "bl-admin@example.com",
-      "admin_id": "8787",
-      "password": "PtZhG78Tk8gx575",
-      "id": 8
-    }
-  ]
+  "users": [],
+  "transaction":[],
+  "courses":[],
+  "admin":[{"name":"bash","password":"bash"}],
+  
+
 }
