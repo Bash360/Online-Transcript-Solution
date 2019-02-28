@@ -26,10 +26,9 @@ $(document).ready(function () {
           password: password
         },
         success: function() {
-          window.location.assign("dashboard.html");
+          window.location.assign(`dashboard.html?id=${student_id}`);
         }
       });
-    //}
 
   })
 
@@ -44,7 +43,7 @@ $(document).ready(function () {
 
       $.ajax({
         method: "GET",
-        url: "http://localhost:3000/users",
+        url: `http://localhost:3000/users`,
         dataType: "json",
         data: {student_id: student_id, password: password },
         success(res) {
@@ -57,5 +56,54 @@ $(document).ready(function () {
      
     })
 
+
+
+    $("#admin_signup").submit(function (event) {
+
+      event.preventDefault();
+  
+      var email = $("#email").val();
+      var admin_id = $("#admin_id").val();
+      var password = $("#password").val();
+  
+        $.ajax({
+          method: "POST",
+          url: "http://localhost:3000/users",
+          data: {
+            email: email,
+            admin_id: admin_id,
+            password: password
+          },
+          success: function() {
+            window.location.assign(`adminDashboard.html?admin_id=${admin_id}`);
+          }
+        });
+  
+    })
+  
+  
+  
+    $("#admin_login").submit(function (event) {
+  
+      event.preventDefault();
+  
+          admin_id = $("#admin_id").val();
+      var password = $("#password").val();
+  
+        $.ajax({
+          method: "GET",
+          url: "http://localhost:3000/users",
+          dataType: "json",
+          data: {admin_id: admin_id, password: password },
+          success(res) {
+                   if (!res.length) {
+                return false
+            }
+            window.location.assign(`adminDashboard.html?admin_id=${admin_id}`);
+          }
+        });
+       
+      })
+  
 
 });
