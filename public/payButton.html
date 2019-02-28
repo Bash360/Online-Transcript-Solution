@@ -37,9 +37,19 @@
     onApprove: function(data, actions) {
       return actions.order.capture().then(function(details) {
     let fullName=details.payer.name.given_name+" "+details.payer.name.surname;
+    let currentdate = new Date(); 
+let dateTime = currentdate.getDate() + "/"
+                + (currentdate.getMonth()+1)  + "/" 
+                + currentdate.getFullYear() + " at "  
+                + currentdate.getHours() + ":"  
+                + currentdate.getMinutes() + ":" 
+                + currentdate.getSeconds();
         $.ajax({url:'http://localhost:3000/transaction',
           method: 'post',
-          data: {"paypalPaymentName":fullName,"orderID": data.orderID},
+          data: {"paypalPaymentName":fullName,
+          "orderID": data.orderID,
+          "orderTime":dateTime
+        },
           success:function(response){
             alert("Payment successful");
           }
