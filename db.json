@@ -1,8 +1,5 @@
 {
   "users": [],
-  "transaction":[],
-  "courses":[],
-  "admin":[{"name":"bash","password":"bash"}],
-  
+  "transaction":[]
 
 }
