@@ -1,0 +1,55 @@
+label {
+    display:flex;
+    padding-bottom: 5px;
+}
+
+.form_container{
+display: flex;
+justify-content: space-around;
+margin-top: 50px;
+}
+
+form {
+    display: block;
+    width: 60%;
+    padding: 20px 10px 10px 10px;
+    min-height: 450px;
+    box-sizing: content-box;
+    border: 2px solid grey
+}
+
+form > div {
+    display:flex;
+    justify-content: center;
+    padding: 10px;
+}
+
+[type="submit"] {
+    width: 95%;
+    padding: 6px;
+    background: grey;
+    color: black;
+    font-weight: bold
+}
+
+[type="submit"]:hover {
+    cursor: pointer;
+    background: darkgray;
+    font-weight: bolder
+}
+
+[type="text"] {
+    width: 90%;
+    padding: 6px;
+}
+
+[type="select"] {
+    width: 90%;
+    padding: 6px;
+}
+
+.select_input {
+    display: block;
+    padding-left: 30px
+    
+}

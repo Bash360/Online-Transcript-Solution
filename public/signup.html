@@ -27,30 +27,30 @@
 				<h3>Registration</h3>
 			</div>
 			<div class="card-body">
-				<form id="target">
+				<form id="submit_signup" autocomplete="off">
 					<div class="input-group form-group">
 						<div class="input-group-prepend">
 							<span class="input-group-text"><i class="fas fa-user"></i></span>
 						</div>
-						<input type="text" id="fullname" name="fullname" class="form-control" placeholder="Fullnames eg John Doe" required=true />
+						<input type="text" id="fullname" class="form-control" placeholder="Fullname eg John Doe" required=true />
 					</div>
 					<div class="input-group form-group">
 						<div class="input-group-prepend">
 							<span class="input-group-text"><i class="fas fa-user"></i></span>
 						</div>
-						<input type="text" name="id" class="form-control" placeholder="Student ID" required>
+						<input type="text" id="student_id" class="form-control" placeholder="StudentID No." required>
 					</div>
 					<div class="input-group form-group">
 						<div class="input-group-prepend">
 							<span class="input-group-text"><i class="fas fa-key"></i></span>
 						</div>
-						<input type="password" id= "password" name="password" class="form-control" placeholder="Password" required>
+						<input type="password" id="password" class="form-control" placeholder="Password" required>
 					</div>
 					<div class="input-group form-group">
 						<div class="input-group-prepend">
 							<span class="input-group-text"><i class="fas fa-key"></i></span>
 						</div>
-						<input type="password" id= "compare_password" name="confirm_pasword" class="form-control" placeholder="Re-enter password" required>
+						<input type="password" id="compare_password" class="form-control" placeholder="Re-enter password" required>
 					</div>
 					<div class="form-group">
 						<input type="submit" id="button" value="Signup" class="btn float-right login_btn">
