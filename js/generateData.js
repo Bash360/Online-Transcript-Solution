@@ -1,4 +1,5 @@
-function doComputerScience(){//module.exports = () => {
+function generateResult(department){
+if(department=="CSC"){
   const courses = { course: [] }
   counter=0;
   for (let i = 1; i <=48; i++) {
@@ -7,7 +8,7 @@ function doComputerScience(){//module.exports = () => {
   }
   return courses;
 }
-function doIct(){//module.exports = () => {
+if(department=="ICT"){
   const courses = { course: [] }
   counter=0;
   // auto generate ICT courses and grades
@@ -17,7 +18,7 @@ function doIct(){//module.exports = () => {
   }
   return courses;
 }
-function doComputerEngineering(){//module.exports = () => {
+if(department=="ENG"){
   const courses = { course: [] }
   counter=0;
   // auto generate computer engineering courses and grade
@@ -30,4 +31,6 @@ function doComputerEngineering(){//module.exports = () => {
  //console.log(courses.course[50].score);
 }
 
-console.log(doComputerEngineering());
+}
+
+console.log(generateResult("ENG"));

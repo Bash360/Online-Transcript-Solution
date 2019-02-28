@@ -6,9 +6,17 @@
     <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <script
-      src="https://www.paypal.com/sdk/js?client-id=ARNHDIR-C2nC5lKYX0PHWvnv5KihpDoqJ7DRFgP0wFLyu04hgOXk15Jbjr8a3f4dE-pKicm_dyH79YNN">
+    <script src="https://www.paypal.com/sdk/js?client-id=ARNHDIR-C2nC5lKYX0PHWvnv5KihpDoqJ7DRFgP0wFLyu04hgOXk15Jbjr8a3f4dE-pKicm_dyH79YNN">
     </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <style media="screen">
+      #paypal-button-container{
+        width: 94px;
+        height: 45px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+    </style>
   </head>
   </head>
   <body>
@@ -28,19 +36,21 @@
     },
     onApprove: function(data, actions) {
       return actions.order.capture().then(function(details) {
-        alert('Transaction completed by ' + details.payer.name.given_name);
-        // Call your server to save the transaction
-        return fetch('/paypal-transaction-complete', {
+    let fullName=details.payer.name.given_name+" "+details.payer.name.surname;
+        $.ajax({url:'http://localhost:3000/transaction',
           method: 'post',
-          body: JSON.stringify({
-            orderID: data.orderID
-          })
+          data: {"paypalPaymentName":fullName,"orderID": data.orderID},
+          success:function(response){
+            alert("Payment successful");
+          }
+
+            
+          
         });
       });
     }
   }).render('#paypal-button-container');
 
-</script>
 </script>
   </body>
 </html>
