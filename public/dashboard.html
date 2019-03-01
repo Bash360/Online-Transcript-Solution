@@ -18,6 +18,10 @@
 
 	<!--Custom styles-->
 	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<script type="text/javascript">
+		if (!localStorage.getItem("studentID")) { window.location='index.html'; }
+		</script>
+	</script>
 </head>
 <body>
 
@@ -53,11 +57,11 @@
 						
 						<ul class="navbar-nav2 ml-auto">
 							<li class="dropdown">
-								<a href="#" id="welcome" class="dropdown-toggle" data-toggle="dropdown">Welcome John</a>
+								<a href="#" id="welcome" class="dropdown-toggle" data-toggle="dropdown"><span id="user">Welcome User/span></a>
 									<ul class="dropdown-menu">
 											<li class="resflset"><a href="#"><i class="fa fa-fw fa-cog"></i> Edit profile</a></li>
 											<li class="divider"></li>
-											<li class="resflset"><a href="index.html"><i class="fa fa-fw fa-power-off"></i> Logout</a></li>
+											<li class="resflset"><button id="logOut"><i class="fa fa-fw fa-power-off"></i> Logout</button></li>
 									</ul>
 							</li>
 						</ul>
@@ -135,8 +139,14 @@
 			integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
 			crossorigin="anonymous"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
-<!-- <script src="js/user.js"></script> -->
-<script src="js/script.js"></script>
+<script src="js/script.js"><script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+ <script>
+ 	$(document).ready(function(){
+	 		$("#logOut").click(function(){
+	 		localStorage.removeItem("studentID");
+	 			window.location="index.html";
+	 		});
+	 	});</script>
 
 
 

@@ -1,8 +1,25 @@
 {
-  "users": [],
-  "transaction":[],
-  "courses":[],
-  "admin":[{"name":"bash","password":"bash"}],
-  
-
+  "users": [
+    {
+      "fullname": "mark bashir",
+      "email": "beejayphil@gmail.com",
+      "student_id": "12323",
+      "department": "CSC",
+      "yearOfEntry": "2013/2014",
+      "yearOfGraduation": "2017/2018",
+      "password": "bash",
+      "id": 1
+    },
+    {
+      "fullname": "bash",
+      "email": "bbb@gmail.com",
+      "student_id": "66666",
+      "department": "CSC",
+      "yearOfEntry": "2013/2014",
+      "yearOfGraduation": "2017/2018",
+      "password": "bash",
+      "id": 2
+    }
+  ],
+  "transaction": []
 }
