@@ -19,7 +19,14 @@
 	<!--Custom styles-->
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 	<script type="text/javascript">
-		if (!localStorage.getItem("studentID")) { window.location='index.html'; }</script>
+		if (!localStorage.getItem("studentID")) { window.location='index.html'; }else{
+			$("document").ready(function(){
+				$.get(`http://localhost:3000/dashboard.html?id=${localStorage.getItem("studentID")}`,function(data){
+					
+				}
+				);
+			});
+		}</script>
 	</script>
 </head>
 <body>
@@ -82,7 +89,6 @@
 			integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
 			crossorigin="anonymous"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
-<!-- <script src="js/user.js"></script> -->
 <script src="js/script.js"><script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
  <script>
  	$(document).ready(function(){
