@@ -12,7 +12,6 @@ $(document).ready(function () {
     var year_of_entry = $("#yoe").val();
     var year_of_graduation = $("#yog").val();
     var password = $("#password").val();
-    localStorage.setItem("studentID",student_id);
 
 
       $.ajax({
