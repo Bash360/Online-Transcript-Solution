@@ -2,7 +2,7 @@
   "users": [],
   "transaction":[],
   "courses":[],
-  "admin":[{"name":"bash","password":"bash"}],
+  "admin":[{"name":"bash","password":"bash"}]
   
 
 }
