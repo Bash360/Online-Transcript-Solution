@@ -9,6 +9,8 @@ $(document).ready(function () {
 let scores = [];
 let unitTotal = [];
 
+var department = $("dept").val();
+
 
   function generateResult(department) {
     if (department == "CSC") {
@@ -87,7 +89,7 @@ if (grade <= 29) points = 0;
 
 
 
-  var courses = generateResult("ENG");
+  var courses = generateResult(deptartment);
 
   var table = $("<table>");
 

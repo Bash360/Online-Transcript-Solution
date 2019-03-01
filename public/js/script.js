@@ -104,6 +104,31 @@ $(document).ready(function () {
         });
        
       })
+
+
+
+      $("#generate_transcript").submit(function (event) {
+
+        event.preventDefault();
+    
+    var student_id = $("#student_id").val();
+    var department = $("#dept").val();
+    var email = $("#email").val();
+    
+          $.ajax({
+            method: "GET",
+            url: `http://localhost:3000/users`,
+            dataType: "json",
+            data: {student_id: student_id, department: department, email: email },
+            success(res) {
+                     if (!res.length) {
+                  return false
+              }
+              window.location.assign(`transcripts_table.html?id=${student_id}`);
+            }
+          });
+         
+        })
   
 
 });
