@@ -1,5 +1,25 @@
 {
-  "users": [],
-  "transaction":[]
-
+  "users": [
+    {
+      "fullname": "mark bashir",
+      "email": "beejayphil@gmail.com",
+      "student_id": "12312",
+      "department": "CSC",
+      "yearOfEntry": "2013/2014",
+      "yearOfGraduation": "2017/2018",
+      "password": "bash",
+      "id": 1
+    },
+    {
+      "fullname": "mark bashir",
+      "email": "beejayphil@yahoo.com",
+      "student_id": "12315",
+      "department": "CSC",
+      "yearOfEntry": "2013/2014",
+      "yearOfGraduation": "2017/2018",
+      "password": "bash",
+      "id": 2
+    }
+  ],
+  "transaction": []
 }

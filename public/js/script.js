@@ -3,7 +3,7 @@ $(document).ready(function () {
 
   $("#submit_signup").submit(function (event) {
 
-    event.preventDefault();
+      event.preventDefault();
 
     var fullname = $("#fullname").val();
     var email = $("#email").val();
@@ -12,6 +12,8 @@ $(document).ready(function () {
     var year_of_entry = $("#yoe").val();
     var year_of_graduation = $("#yog").val();
     var password = $("#password").val();
+    localStorage.setItem("studentID",student_id);
+
 
       $.ajax({
         method: "POST",
