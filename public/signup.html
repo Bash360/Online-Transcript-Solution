@@ -18,6 +18,14 @@
 
 	<!--Custom styles-->
 	<link rel="stylesheet" type="text/css" href="css/stylesheet.css">
+	<script type="text/javascript">	$(document).ready(function(){
+			localStorage.removeItem("studentID");
+	 		$("#button").click(function(){
+	 			localStorage.removeItem("studentID")
+				 localStorage.setItem("studentID",$("#student_id").val());
+			;
+	 		});
+	 	});</script>
 </head>
 <body>
 <div id="signup_container">
