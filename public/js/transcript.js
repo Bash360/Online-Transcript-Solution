@@ -1,18 +1,46 @@
 
 $(document).ready(function () {
 
+  
 
+  $("#generate_transcript").submit(function (event) {
 
+    event.preventDefault();
 
+    var student_id = $("#student_id").val();
+    var department = $("#dept").val();
+    var email = $("#email").val();
+  
+    //console.log(typeof department);
+  
+      $.ajax({
+        method: "GET",
+        url: `http://localhost:3000/users`,
+        dataType: "json",
+        data: {student_id: student_id, department: department, email: email },
+        success(res) {
+                 if (res.length) {
+
+          courses = generateResult(department);
+
+          alert(department);
+
+          window.location.assign(`transcripts_table.html`);
+
+        }
+        }
+      });
+     
+    })
 
 
 let scores = [];
 let unitTotal = [];
 
-var department = $("dept").val();
-
 
   function generateResult(department) {
+
+    // alert(department)
     if (department == "CSC") {
       const courses = [];
       counter = 0;
@@ -46,11 +74,8 @@ var department = $("dept").val();
         scores.push(Object.values(obj)[1]);
         unitTotal.push(Object.values(obj)[2]);
     })
-
-
       return courses;
     }
-
   }
 
 
@@ -88,9 +113,6 @@ if (grade <= 29) points = 0;
 }
 
 
-
-  var courses = generateResult(deptartment);
-
   var table = $("<table>");
 
   table.addClass("table");
@@ -123,17 +145,16 @@ if (grade <= 29) points = 0;
 
   th_data.appendTo(tr);
 
+
+
   var tbody = $("<tbody>");
-
-
-
-
-  
 
   tbody.appendTo(table);
 
-  var key = courses;
-  for (obj of key) {
+
+  var courses = generateResult("ICT")
+
+    for (obj of courses) {
 
     let tr = $("<tr>");
 
@@ -151,26 +172,13 @@ if (grade <= 29) points = 0;
 
     td_info.appendTo(tr);
 
-
-
     let td_data = $("<td>");
 
     td_data.text(Object.values(obj)[2])
 
     td_data.appendTo(tr);
 
-
-
-
-
-
-
-
   }
-
-
-
-
 
   var tfoot = $("<tfoot>");
 
@@ -208,4 +216,5 @@ if (grade <= 29) points = 0;
    let response = `Cummulative Grade Point Average (CGPA) is ${CGPA}`
 
    $("#cgpa").html(response);
+
 });
