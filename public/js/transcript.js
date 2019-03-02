@@ -1,46 +1,44 @@
-
 $(document).ready(function () {
-
-  
 
   $("#generate_transcript").submit(function (event) {
 
     event.preventDefault();
 
-    var student_id = $("#student_id").val();
-    var department = $("#dept").val();
-    var email = $("#email").val();
-  
-    //console.log(typeof department);
-  
-      $.ajax({
-        method: "GET",
-        url: `http://localhost:3000/users`,
-        dataType: "json",
-        data: {student_id: student_id, department: department, email: email },
-        success(res) {
-                 if (res.length) {
+    student_id = $("#student_id").val();
+    department = $("#dept").val();
+    email = $("#email").val();
 
-          courses = generateResult(department);
+    $.ajax({
+      method: "GET",
+      url: `http://localhost:3000/users`,
+      dataType: "json",
+      data: { student_id: student_id, department: department, email: email },
+      success: function (res) {
+        if (!res.length) {
+          alert("Details do not match")
+        } else {
+          localStorage.setItem("department", $("#dept").val());
 
-          alert(department);
-
-          window.location.assign(`transcripts_table.html`);
-
+          return window.location.assign(`transcripts_table.html`);
         }
-        }
-      });
-     
-    })
+
+      }
+    });
+
+  })
 
 
-let scores = [];
-let unitTotal = [];
+  let scores = [];
+  let unitTotal = [];
+  let dept = localStorage.getItem("department");
+  let courses = generateResult(dept);
+  let totalScores = calculateTotalPoints(scores);
+  let totalUnits = calculateTotalUnits(unitTotal);
+
 
 
   function generateResult(department) {
-
-    // alert(department)
+    alert(department);
     if (department == "CSC") {
       const courses = [];
       counter = 0;
@@ -70,47 +68,45 @@ let unitTotal = [];
         counter++;
       }
 
-         courses.forEach(obj => {
+      courses.forEach(obj => {
         scores.push(Object.values(obj)[1]);
         unitTotal.push(Object.values(obj)[2]);
-    })
+      })
       return courses;
     }
   }
 
 
-function calculateTotalUnits(grades) {
+  function calculateTotalUnits(grades) {
+    let total = 0;
 
-  let total = 0;
+    grades.forEach(grade => {
 
-  grades.forEach( grade => {
-    
-    total+= grade
-})
+      total += grade
+    })
 
-  return total
-}
+    return total
+  }
 
 
-function calculateTotalPoints(grades) {
+  function calculateTotalPoints(grades) {
+    let total = 0;
 
-  let total = 0;
+    let points;
 
-  let points;
+    grades.forEach(grade => {
+      if (grade >= 70) points = 5;
+      if (grade <= 69) points = 4;
+      if (grade <= 59) points = 3;
+      if (grade <= 49) points = 2;
+      if (grade <= 39) points = 1;
+      if (grade <= 29) points = 0;
 
-  grades.forEach( grade => {
-    if (grade >= 70) points = 5;
-if (grade <= 69) points = 4;
-if (grade <= 59) points = 3;
-if (grade <= 49) points = 2;
-if (grade <= 39) points = 1;
-if (grade <= 29) points = 0;
-    
-    total+= points
-})
+      total += points
+    })
 
-  return total
-}
+    return total
+  }
 
 
   var table = $("<table>");
@@ -151,10 +147,7 @@ if (grade <= 29) points = 0;
 
   tbody.appendTo(table);
 
-
-  var courses = generateResult("ICT")
-
-    for (obj of courses) {
+  for (obj of courses) {
 
     let tr = $("<tr>");
 
@@ -190,31 +183,27 @@ if (grade <= 29) points = 0;
 
   tr.appendTo(tfoot);
 
-   var th_key = $("<th>");
+  var th_key = $("<th>");
 
-   var th_info = $("<th>");
+  var th_info = $("<th>");
 
-   var th_data = $("<th>");
+  var th_data = $("<th>");
 
-   th_key.text("TOTAL POINTS / UNITS");
+  th_key.text("TOTAL POINTS / UNITS");
 
-   let totalScores = calculateTotalPoints(scores)
+  th_info.text(totalScores);
 
-   let totalUnits = calculateTotalUnits(unitTotal)
+  th_data.text(totalUnits);
 
-   th_info.text(totalScores);
+  th_key.appendTo(tr);
 
-   th_data.text(totalUnits);
+  th_info.appendTo(tr);
 
-   th_key.appendTo(tr);
+  th_data.appendTo(tr);
 
-   th_info.appendTo(tr);
+  let CGPA = totalScores * 3 / totalUnits
+  let response = `Cummulative Grade Point Average (CGPA) is ${CGPA}`
 
-   th_data.appendTo(tr);
-
-   let CGPA = totalScores*3/totalUnits
-   let response = `Cummulative Grade Point Average (CGPA) is ${CGPA}`
-
-   $("#cgpa").html(response);
+  $("#cgpa").html(response);
 
 });
