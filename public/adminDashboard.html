@@ -35,18 +35,18 @@
 								</a>
 			
 							<li class="nav-item">
-								<a class="nav-link sidefrst" href="transcript.html">
-									<span class="textside">  Get all Users</span>
+								<a class="nav-link sidefrst" href="transcripts_table.html">
+									<span class="textside">  Generate Transcript</span>
 								</a>
 							</li>
 			
 							<li class="nav-item">
-								<a class="nav-link sidesecnd" href="employee.php">
+								<a class="nav-link sidesecnd" href="">
 									<span class="textside">  Delete Users</span>
 								</a>
 							</li>
 							<li class="nav-item">
-								<a class="nav-link sidesthrd" href="clients.php">
+								<a class="nav-link sidesthrd" href="">
 									<span class="textside">  Get Users Courses</span>
 								</a>
 						</ul>
@@ -71,6 +71,59 @@
 			
 						
 			
+
+							<div class="card-body">
+								<form id="generate_transcript" autocomplete="on">
+
+
+									<div class="input-group form-group">
+										<div class="input-group-prepend">
+											<span class="input-group-text"><i class="fas fa-user"></i></span>
+										</div>
+										<input type="email" id="email" class="form-control" placeholder="Email" required=true />
+									</div>
+				
+				
+									<div class="input-group form-group">
+										<div class="input-group-prepend">
+											<span class="input-group-text"><i class="fas fa-user"></i></span>
+										</div>
+										<input type="text" id="student_id" class="form-control" placeholder="StudentID No." maxlength="5" size="5" required>
+									</div>
+				
+				
+				
+				
+				
+									<div class="input-group form-group">
+										<div class="input-group-prepend">
+											<span class="input-group-text"><i class="fas fa-user"></i></span>
+										</div>
+										<select id="dept" type="select" name="Departments">
+											<option value="CSC">Computer Science</option>
+											<option value="ICT">Information Technology</option>
+											<option value="ENG">Computer Engineering</option>
+										</select>
+									</div>
+				
+									<!-- <input type="text" id="email" class="form-control" placeholder="" required=true /> -->
+									
+				
+				
+									
+				
+			
+
+
+									<div class="form-group">
+										<input type="submit" id="button" value="Generate" class="btn float-right login_btn">
+									</div>
+								</form>
+							</div>
+
+
+
+
 					</div>
 				</div>
 			</div>
@@ -80,7 +133,7 @@
 			crossorigin="anonymous"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
 <script src="js/script.js"></script>
-<!-- <script src="js/admin.js"></script> -->
+<script src="js/transcript.js"></script>
 
 
 

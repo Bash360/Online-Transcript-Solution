@@ -15,3 +15,10 @@ http://localhost:3000/transcript_page.html
 http://localhost:3000/admin.html
 http://localhost:3000/admin_dashboard.html
 http://localhost:3000/users (edited) 
+
+#STACKS USED
+
+Jquery
+Javas
+Bootstrap
+Ajax
