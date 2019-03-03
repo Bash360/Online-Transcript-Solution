@@ -94,3 +94,14 @@ margin-left: 4px;
 .height-550 {
   height: 550px
 }
+
+#text-box {
+  margin: 25px 0px 0px 40px;
+  color: white
+}
+
+#text-style {
+  color: #ffc312;
+  font-weight: bold;
+  text-decoration: underline
+}

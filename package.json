@@ -8,13 +8,13 @@
   },
   "devDependencies": {},
   "scripts": {
-    "start": "json-server --watch db.json"
+    "start": "node index.js"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/wolfma360/Online-Transcript-Solution.git"
+    "url": "https://github.com/wolfma360/Online-Transcript-Solution.git"
   },
-  "author": "",
+  "author": "Johnbosco & Bash",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/wolfma360/Online-Transcript-Solution/issues"
