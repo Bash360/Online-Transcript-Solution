@@ -8,7 +8,7 @@
   },
   "devDependencies": {},
   "scripts": {
-    "start": "json-server db.json --port PORT",
+    "start": "json-server --watch db.json --port PORT"
   },
   "repository": {
     "type": "git",
