@@ -1,5 +1,3 @@
-//export const transcript = () => {
-
   $(document).ready(function () {
 
     $("#generate_transcript").submit(function (event) {
@@ -40,7 +38,6 @@
 
 
     function generateResult(department) {
-      alert(department);
       if (department == "CSC") {
         const courses = [];
         counter = 0;
@@ -209,5 +206,3 @@
     $("#cgpa").html(response);
 
   });
-
-//}

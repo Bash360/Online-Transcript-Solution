@@ -1,137 +1,139 @@
-
 <!DOCTYPE html>
 <html>
+
 <head>
-  <title>Decagon Transcript Solution | Signup</title>
-  
-  <!-- <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css"> -->
+	<title>Decagon Transcript Solution | Signup</title>
 
-<!------ Include the above in your HEAD tag ---------->
-
-   <!--Made with love by Mutiullah Samim -->
-   
 	<!--Bootsrap 4 CDN-->
-	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-    
-    <!--Fontawesome CDN-->
-	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+	 crossorigin="anonymous">
+
+	<!--Fontawesome CDN-->
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU"
+	 crossorigin="anonymous">
 
 	<!--Custom styles-->
 	<link rel="stylesheet" type="text/css" href="css/stylesheet.css">
-	<script type="text/javascript">	$(document).ready(function(){
-	 		$("#button").click(function(){
-			localStorage.removeItem("studentID");
-				 localStorage.setItem("studentID",$("#student_id").val());
-			;
-	 		});
-	 	});</script>
+	<script type="text/javascript">	$(document).ready(function () {
+			$("#button").click(function () {
+				localStorage.removeItem("studentID");
+				localStorage.setItem("studentID", $("#student_id").val());
+				;
+			});
+		});</script>
 </head>
+
 <body>
-<div id="signup_container">
-	<div class="d-flex justify-content-center h-100">
-		<div class="card height-550">
-			<div class="card-header">
-				<h3>Registration</h3>
-			</div>
-			<div class="card-body">
-				<form id="submit_signup" autocomplete="off">
-					<div class="input-group form-group">
-						<div class="input-group-prepend">
-							<span class="input-group-text"><i class="fas fa-user"></i></span>
-						</div>
-						<input type="text" id="fullname" class="form-control" placeholder="Fullname eg John Doe" required=true />
-					</div>
-					<div class="input-group form-group">
-						<div class="input-group-prepend">
-							<span class="input-group-text"><i class="fas fa-user"></i></span>
-						</div>
-						<input type="email" id="email" class="form-control" placeholder="Email" required=true />
-					</div>
-
-
-					<div class="input-group form-group">
-						<div class="input-group-prepend">
-							<span class="input-group-text"><i class="fas fa-user"></i></span>
-						</div>
-						<input type="text" id="student_id" class="form-control" placeholder="StudentID No." maxlength="5" size="5" required>
-					</div>
-
-
-
-
-
-					<div class="input-group form-group">
-						<div class="input-group-prepend">
-							<span class="input-group-text"><i class="fas fa-user"></i></span>
-						</div>
-						<select id="dept" type="select" name="Departments">
-							<option value="CSC">Computer Science</option>
-							<option value="ICT">Information Technology</option>
-							<option value="ENG">Computer Engineering</option>
-						</select>
-					</div>
-
-
-					
-
-
-
-
-					<div class="input-group form-group">
-						<div class="input-group-prepend">
-							<span class="input-group-text"><i class="fas fa-user"></i></span>
-						</div>
-						<select id="yoe" type="select" class="select_input" name="Year of Entry">
-							<option value="2012/2013">2012/2013</option>
-							<option value="2013/2014">2013/2014</option>
-							<option value="2015/2016">2015/2016</option>
-						</select>
-					</div>
-
-
-
-					
-
-
-
-
-					<div class="input-group form-group">
-						<div class="input-group-prepend">
-							<span class="input-group-text"><i class="fas fa-key"></i></span>
-						</div>
-						<select id="yog" type="select" name="Year of Graduation">
-							<option value="2016/2017">2016/2017</option>
-							<option value="2017/2018">2017/2018</option>
-							<option value="2018/2019">2018/2019</option>
-						</select>
-					</div>
-
-
-
-
-
-					<div class="input-group form-group">
-						<div class="input-group-prepend">
-							<span class="input-group-text"><i class="fas fa-key"></i></span>
-						</div>
-						<input type="password" id="password" class="form-control" placeholder="Password" required>
-					</div>
-					<div class="form-group">
-						<input type="submit" id="button" value="Signup" class="btn float-right login_btn">
-					</div>
-				</form>
-			</div>
-			<div class="card-footer">
-				<div class="d-flex justify-content-center links">
-					Already have an account?<a id="login_form" href="index.html">Login</a>
+	<div id="text-box">
+		See <a id="text-style" href="https://github.com/wolfma360/Online-Transcript-Solution/blob/develop/README.md">Docs</a>
+	</div>
+	<div id="signup_container">
+		<div class="d-flex justify-content-center h-100">
+			<div class="card height-550">
+				<div class="card-header">
+					<h3>Registration</h3>
 				</div>
+				<div class="card-body">
+					<form id="submit_signup" autocomplete="off">
+						<div class="input-group form-group">
+							<div class="input-group-prepend">
+								<span class="input-group-text"><i class="fas fa-user"></i></span>
+							</div>
+							<input type="text" id="fullname" class="form-control" placeholder="Fullname eg John Doe" required=true />
+						</div>
+						<div class="input-group form-group">
+							<div class="input-group-prepend">
+								<span class="input-group-text"><i class="fas fa-user"></i></span>
+							</div>
+							<input type="email" id="email" class="form-control" placeholder="Email" required=true />
+						</div>
+
+
+						<div class="input-group form-group">
+							<div class="input-group-prepend">
+								<span class="input-group-text"><i class="fas fa-user"></i></span>
+							</div>
+							<input type="text" id="student_id" class="form-control" placeholder="StudentID No." maxlength="5" size="5"
+							 required>
+						</div>
+
+
+
+
+
+						<div class="input-group form-group">
+							<div class="input-group-prepend">
+								<span class="input-group-text"><i class="fas fa-user"></i></span>
+							</div>
+							<select id="dept" type="select" name="Departments">
+								<option value="CSC">Computer Science</option>
+								<option value="ICT">Information Technology</option>
+								<option value="ENG">Computer Engineering</option>
+							</select>
+						</div>
+
+
+
+
+
+
+
+						<div class="input-group form-group">
+							<div class="input-group-prepend">
+								<span class="input-group-text"><i class="fas fa-user"></i></span>
+							</div>
+							<select id="yoe" type="select" class="select_input" name="Year of Entry">
+								<option value="2012/2013">2012/2013</option>
+								<option value="2013/2014">2013/2014</option>
+								<option value="2015/2016">2015/2016</option>
+							</select>
+						</div>
+
+
+
+
+
+
+
+
+						<div class="input-group form-group">
+							<div class="input-group-prepend">
+								<span class="input-group-text"><i class="fas fa-key"></i></span>
+							</div>
+							<select id="yog" type="select" name="Year of Graduation">
+								<option value="2016/2017">2016/2017</option>
+								<option value="2017/2018">2017/2018</option>
+								<option value="2018/2019">2018/2019</option>
+							</select>
+						</div>
+
+
+
+
+
+						<div class="input-group form-group">
+							<div class="input-group-prepend">
+								<span class="input-group-text"><i class="fas fa-key"></i></span>
+							</div>
+							<input type="password" id="password" class="form-control" placeholder="Password" required>
+						</div>
+						<div class="form-group">
+							<input type="submit" id="button" value="Signup" class="btn float-right login_btn">
+						</div>
+					</form>
 				</div>
+				<div class="card-footer">
+					<div class="d-flex justify-content-center links">
+						Already have an account?<a id="login_form" href="index.html">Login</a>
+					</div>
+				</div>
+			</div>
 		</div>
 	</div>
-</div>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
-<script src="js/script.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+	<script src="js/script.js"></script>
 </body>
+
 </html>
