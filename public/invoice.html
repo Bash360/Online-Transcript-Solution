@@ -1,0 +1,147 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+
+    <title>Invoice</title>
+    <link rel="stylesheet" type="text/css" href="invoice.css">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script type="text/javascript">
+		if (!localStorage.getItem("studentID")) { window.location='index.html'; }
+		$(document).ready(function(){
+		$("#accountname").val(localStorage.getItem("paypalPaymentName"));
+		$("#orderid").val(localStorage.getItem("orderID"));
+		$("#timepay").val(localStorage.getItem("orderTime"));
+		});
+		</script>
+</head>
+<body>
+
+    <div class="invoice-box">
+
+        <table cellpadding="0" cellspacing="0">
+
+            <tr class="top">
+
+                <td colspan="2">
+
+                    <table>
+
+                        <tr>
+
+                            <td class="title">
+
+                                <img src="/images/deca logo.png" style="width:100%; max-width:300px;">
+
+                            </td>
+
+
+                        </tr>
+
+                    </table>
+
+                </td>
+
+            </tr>
+
+            
+
+            <tr class="information">
+
+                <td colspan="2">
+
+                    <table>
+
+                        <tr>
+
+                            <td>
+
+                                Obaikoro<br>
+
+                                Ilupeju<br>
+
+                            
+
+                            </td>
+
+                            <td>
+
+                                Jane Doe<br>
+
+                                janedoe@decagon.com
+
+                            </td>
+
+                        </tr>
+
+                    </table>
+
+                </td>
+            </tr>
+            <tr class="heading">
+<td>
+                    Payment Method
+                </td>
+                <td>
+                    Pay pal
+                </td>
+            </tr>
+            <tr class="heading">
+                <td>
+                    Service
+                </td>
+                <td>
+                    Transcript
+                </td>
+        </tr>
+            <tr class="item">
+                <td>
+                    price
+               </td>
+                <td>
+                    $20.00
+                </td>
+            </tr>
+			            <tr class="heading">
+<td>
+                    Payment Method
+                </td>
+                <td>
+                    Paypal
+                </td>
+            </tr>
+            <tr class="heading">
+                <td>
+                       Paypal Account Name
+                </td>
+                <td>
+                    <input id="accountname" readonly/>
+                </td>
+        </tr>
+            <tr class="item">
+                <td>
+                    Order:ID
+                </td>
+                <td>
+                     <input id="orderid" readonly/>
+                </td>
+            </tr>
+			            <tr class="item">
+                <td>
+                    Time of Payment
+                </td>
+                <td>
+                    <input id="timepay" readonly/>
+                </td>
+            </tr>
+
+            <tr class="total">
+                <td></td>
+                <td>
+                   <button>Send To Mail</button>
+                </td>
+            </tr>
+        </table>
+    </div>
+</body>
+</html>

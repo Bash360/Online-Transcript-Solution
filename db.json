@@ -1,4 +1,4 @@
-
+{
   "users": [
     {
       "fullname": "mark bashir",
@@ -19,7 +19,63 @@
       "yearOfGraduation": "2017/2018",
       "password": "bash",
       "id": 2
+    },
+    {
+      "fullname": "john bosco",
+      "email": "bash@gmail.com",
+      "student_id": "88888",
+      "department": "ENG",
+      "yearOfEntry": "2015/2016",
+      "yearOfGraduation": "2018/2019",
+      "password": "bash",
+      "id": 3
+    },
+    {
+      "fullname": "babajidebaba@gmail.com",
+      "email": "baba@gmail.com",
+      "student_id": "23434",
+      "department": "CSC",
+      "yearOfEntry": "2013/2014",
+      "yearOfGraduation": "2017/2018",
+      "password": "bash",
+      "id": 4
     }
   ],
-  "transaction": []
+  "transaction": [
+    {
+      "paypalPaymentName": "john Doe",
+      "studentID": "12323",
+      "orderID": "3U069807JD249272A",
+      "orderTime": "3/3/2019 at 1:54:26",
+      "id": 1
+    },
+    {
+      "paypalPaymentName": "john Doe",
+      "studentID": "",
+      "orderID": "55V625696G0818715",
+      "orderTime": "3/3/2019 at 2:43:10",
+      "id": 2
+    },
+    {
+      "paypalPaymentName": "john Doe",
+      "studentID": "12323",
+      "orderID": "6DE065283F4666943",
+      "orderTime": "3/3/2019 at 2:53:11",
+      "id": 3
+    },
+    {
+      "paypalPaymentName": "john Doe",
+      "studentID": "12323",
+      "orderID": "3W95093000532174C",
+      "orderTime": "3/3/2019 at 3:2:14",
+      "id": 4
+    },
+    {
+      "paypalPaymentName": "john Doe",
+      "studentID": "12323",
+      "orderID": "5ET91887AS180570H",
+      "orderTime": "3/3/2019 at 3:22:4",
+      "id": 5
+    }
+  ]
 }
