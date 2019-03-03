@@ -45,6 +45,16 @@
       "admin_id": "1234",
       "password": "admin",
       "id": 5
+    },
+    {
+      "fullname": "JohnB",
+      "email": "boscoseries@yahoo.com",
+      "student_id": "12345",
+      "department": "CSC",
+      "yearOfEntry": "2012/2013",
+      "yearOfGraduation": "2016/2017",
+      "password": "12345",
+      "id": 6
     }
   ],
   "transaction": [

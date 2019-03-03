@@ -30,7 +30,8 @@ is an online transcript solution for the alumni of Decagon University to request
 
 - open your terminal or cmd
 - run git clone https://github.com/wolfma360/Online-Transcript-Solution.git
-- run npm install
+- run npm install to install dependencies
+- run npm start to start the app
 - visit http://localhost:3000 on your browser
 
 # HOSTED PAGES
