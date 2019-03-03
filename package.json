@@ -3,10 +3,10 @@
   "version": "1.0.0",
   "description": "An online transcript solution",
   "main": "index.js",
-  "dependencies": {},
-  "devDependencies": {
+  "dependencies": {
     "json-server": "^0.14.2"
   },
+  "devDependencies": {},
   "scripts": {
     "start": "node index.js"
   },
