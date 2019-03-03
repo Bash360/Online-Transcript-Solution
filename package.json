@@ -8,7 +8,7 @@
   },
   "devDependencies": {},
   "scripts": {
-    "start": "json-server db.json --port 3000||process.env.PORT"
+    "start": "json-server db.json --port process.env.PORT"
   },
   "repository": {
     "type": "git",
