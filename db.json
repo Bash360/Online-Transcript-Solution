@@ -39,6 +39,12 @@
       "yearOfGraduation": "2017/2018",
       "password": "bash",
       "id": 4
+    },
+    {
+      "email": "boscoseries@gmail.com",
+      "admin_id": "1234",
+      "password": "admin",
+      "id": 5
     }
   ],
   "transaction": [
@@ -76,6 +82,13 @@
       "orderID": "5ET91887AS180570H",
       "orderTime": "3/3/2019 at 3:22:4",
       "id": 5
+    },
+    {
+      "paypalPaymentName": "john Doe",
+      "studentID": "88888",
+      "orderID": "4SM94869BX1804005",
+      "orderTime": "3/3/2019 at 13:9:6",
+      "id": 6
     }
   ]
 }

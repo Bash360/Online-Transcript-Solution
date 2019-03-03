@@ -25,7 +25,6 @@
 		$(document).ready(function(){ $("#student").val(localStorage.getItem("studentID"))});
 		
 		</script>
-	</script>
 	<style media="screen">
       #paypal-button-container{
         width:50px;
@@ -109,6 +108,14 @@
 												<input type="text" id="student" class="form-control" placeholder="Student ID"   maxlength="5" size="5" readonly>
 											</div>
 						
+
+
+											<div class="input-group form-group">
+												<div class="input-group-prepend">
+													<span class="input-group-text"><i class="fas fa-user"></i></span>
+												</div>
+												<input type="text" id="orderId" class="form-control" placeholder="Payment Order ID e.g 3U069807JD249272A">
+											</div>
 						
 						
 						
@@ -141,6 +148,22 @@
 
 
 
+<div class= "container">
+		<h4>STEPS TO REQUEST FOR YOUR TRANSCRIPT</h4>
+    <table class="rounded-list">
+        <tr>
+            <td>
+            <ol>
+            <li><p>Click the Paypal button at the top left corner of this page and complete a one-time payment of $20</p></li>
+            <li><p>On success, take note of your payment Order ID</p></li>
+            <li><p>Complete the Transcript Request form by filling the details required</p></li>
+            <li><p>Transcript will be sent to your provided email address upon confirmation of your payment</p></li>
+            </ol>
+            </td>
+        </tr>
+    </table>
+</div>
+
 
 
 			
@@ -152,7 +175,8 @@
 			integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
 			crossorigin="anonymous"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
-<script src="js/script.js"><script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script src="js/script.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
  <script>
  	$(document).ready(function(){
 	 		$("#logOut").click(function(){
