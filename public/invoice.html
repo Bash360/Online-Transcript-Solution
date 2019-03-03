@@ -4,20 +4,34 @@
     <meta charset="utf-8">
 
     <title>Invoice</title>
-    <link rel="stylesheet" type="text/css" href="invoice.css">
+    <link rel="stylesheet" type="text/css" href="css/invoice.css">
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 	<script type="text/javascript">
+
 		if (!localStorage.getItem("studentID")) { window.location='index.html'; }
+		if(!localStorage.getItem("orderID")){
+		alert("No Invoice  No Payment Made");
+		window.location='dashboard.html';}
 		$(document).ready(function(){
 		$("#accountname").val(localStorage.getItem("paypalPaymentName"));
 		$("#orderid").val(localStorage.getItem("orderID"));
 		$("#timepay").val(localStorage.getItem("orderTime"));
+		
+		$("#backToDashboard").click(function(){window.location='dashboard.html';});
+		$("#print").click(function(){
+		$("#backToDashboard").hide();
+$("#print").hide();
+		window.print();
+		 $("#backToDashboard").show();
+		  $("#print").show;
+		});
+		
 		});
 		</script>
 </head>
 <body>
 
-    <div class="invoice-box">
+    <div class="invoice-box" id="invoice" >
 
         <table cellpadding="0" cellspacing="0">
 
@@ -136,9 +150,9 @@
             </tr>
 
             <tr class="total">
-                <td></td>
+                <td><button id="backToDashboard">Back to DashBoard</button></td>
                 <td>
-                   <button>Send To Mail</button>
+                   	<button id="print">Print Invoice</button>
                 </td>
             </tr>
         </table>
