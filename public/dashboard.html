@@ -22,7 +22,34 @@
     
 	<script type="text/javascript">
 		if (!localStorage.getItem("studentID")) { window.location='index.html'; }
-		$(document).ready(function(){ $("#student").val(localStorage.getItem("studentID"))});
+		$(document).ready(function(){
+		$("#student").val(localStorage.getItem("studentID"));
+		$("#orderId").val(localStorage.getItem("orderID"));
+		
+		
+		$("#request").click(function(){
+		let student=$("#student").val();
+		let email=$("#email").val();
+		let order=$("#orderID").val();
+		let course=$("#dept option:selected").text();
+		$.ajax({url:"http://localhost:3000/requestTransaction",
+		method:"post",
+		data:{"studentID":student,
+		"email":email,
+		"course":course,
+		"orderID":order
+		
+		},
+		success:function(){
+		email=$("#email").val();
+		  $("input[type=button]").attr("disabled", "disabled");
+		  alert("Transcript has been Requested Expect Mail");
+		
+		}
+		
+		});
+		});
+		});
 		
 		</script>
 	<style media="screen">
@@ -90,12 +117,12 @@
 
 
 								<div class="card-body">
-										<form id="generate_transcript"  action = "dashboard_table.html" autocomplete="off">
+										<form id="generate_transcript"   autocomplete="off">
 
 
 											<div class="input-group form-group">
 												<div class="input-group-prepend">
-													<span class="input-group-text"><i class="fas fa-user"></i></span>
+													<span class="input-group-text">Student Email &nbsp;<i class="fas fa-user"></i></span>
 												</div>
 												<input type="email" id="email" class="form-control" placeholder="Email" required=true />
 											</div>
@@ -103,7 +130,7 @@
 						
 											<div class="input-group form-group">
 												<div class="input-group-prepend">
-													<span class="input-group-text"><i class="fas fa-user"></i></span>
+													<span class="input-group-text">Student ID &nbsp;<i class="fas fa-user"></i></span>
 												</div>
 												<input type="text" id="student" class="form-control" placeholder="Student ID"   maxlength="5" size="5" readonly>
 											</div>
@@ -112,9 +139,9 @@
 
 											<div class="input-group form-group">
 												<div class="input-group-prepend">
-													<span class="input-group-text"><i class="fas fa-user"></i></span>
+													<span class="input-group-text">Payment ID &nbsp;<i class="fas fa-user"></i></span>
 												</div>
-												<input type="text" id="orderId" class="form-control" placeholder="Payment Order ID e.g 3U069807JD249272A">
+												<input type="text" id="orderId" class="form-control" placeholder="Payment Order ID e.g 3U069807JD249272A" required="true" readonly>
 											</div>
 						
 						
@@ -141,7 +168,7 @@
 
 
 											<div class="form-group">
-												<input type="submit" id="button" value="Request For Transcript " class="btn float-right login_btn">
+												<input type="button" id="request" value="Request For Transcript " class="btn float-right login_btn">
 											</div>
 										</form>
 									</div>

@@ -4,14 +4,18 @@
     <meta charset="utf-8">
 
     <title>Invoice</title>
-    <link rel="stylesheet" type="text/css" href="invoice.css">
+    <link rel="stylesheet" type="text/css" href="css/invoice.css">
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 	<script type="text/javascript">
 		if (!localStorage.getItem("studentID")) { window.location='index.html'; }
+		if(!localStorage.getItem("orderID")){
+		alert("No Invoice  No Payment Made");
+		window.location='dashboard.html';}
 		$(document).ready(function(){
 		$("#accountname").val(localStorage.getItem("paypalPaymentName"));
 		$("#orderid").val(localStorage.getItem("orderID"));
 		$("#timepay").val(localStorage.getItem("orderTime"));
+		$("#backToDashboard").click(function(){window.location='dashboard.html';});
 		});
 		</script>
 </head>
@@ -136,7 +140,7 @@
             </tr>
 
             <tr class="total">
-                <td></td>
+                <td><button id="backToDashboard">Back to DashBoard</button></td>
                 <td>
                    <button>Send To Mail</button>
                 </td>
