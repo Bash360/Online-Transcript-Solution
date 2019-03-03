@@ -9,7 +9,7 @@
   },
   "devDependencies": {},
   "scripts": {
-    "start": "cross-env PORT=process.env.PORT && json-server --watch db.json"
+    "start": "cross-env PORT=process.env.PORT && json-server db.json"
   },
   "repository": {
     "type": "git",
