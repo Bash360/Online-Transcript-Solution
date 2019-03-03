@@ -18,7 +18,7 @@
       }
     </style>
     <script type="text/javascript">
-    if (!localStorage.getItem("studentID")) { window.location='index.html'; }</script>
+    if (!localStorage.getItem("studentID")) { window.location='index.html'; }
   </script>
   </head>
   </head>
@@ -51,7 +51,8 @@ let dateTime = currentdate.getDate() + "/"
           method: 'post',
           data: {"paypalPaymentName":fullName,
           "orderID": data.orderID,
-          "orderTime":dateTime
+          "orderTime":dateTime,
+          "userID":localStorage.getItem("studentID")
         },
           success:function(response){
             alert("Payment successful");

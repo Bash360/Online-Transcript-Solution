@@ -3,7 +3,7 @@ $(document).ready(function () {
 
   $("#submit_signup").submit(function (event) {
 
-      event.preventDefault();
+    event.preventDefault();
 
     var fullname = $("#fullname").val();
     var email = $("#email").val();
@@ -14,22 +14,22 @@ $(document).ready(function () {
     var password = $("#password").val();
 
 
-      $.ajax({
-        method: "POST",
-        url: "http://localhost:3000/users",
-        data: {
-          fullname: fullname,
-          email: email,
-          student_id: student_id,
-          department: department,
-          yearOfEntry: year_of_entry,
-          yearOfGraduation: year_of_graduation,
-          password: password
-        },
-        success: function() {
-          window.location.assign(`dashboard.html?id=${student_id}`);
-        }
-      });
+    $.ajax({
+      method: "POST",
+      url: "http://localhost:3000/users",
+      data: {
+        fullname: fullname,
+        email: email,
+        student_id: student_id,
+        department: department,
+        yearOfEntry: year_of_entry,
+        yearOfGraduation: year_of_graduation,
+        password: password
+      },
+      success: function () {
+        window.location.assign(`dashboard.html?id=${student_id}`);
+      }
+    });
 
   })
 
@@ -39,97 +39,73 @@ $(document).ready(function () {
 
     event.preventDefault();
 
-        student_id = $("#student_id").val();
+    student_id = $("#student_id").val();
     var password = $("#password").val();
 
-      $.ajax({
-        method: "GET",
-        url: `http://localhost:3000/users`,
-        dataType: "json",
-        data: {student_id: student_id, password: password },
-        success(res) {
-                 if (!res.length) {
-              return false
-          }
+    $.ajax({
+      method: "GET",
+      url: `http://localhost:3000/users`,
+      dataType: "json",
+      data: { student_id: student_id, password: password },
+      success: function (res) {
+        if (!res.length) {
+          alert("Details do not match")
+        } else {
           window.location.assign(`dashboard.html?id=${student_id}`);
         }
-      });
-     
-    })
+      }
+    });
+
+  })
 
 
 
-    $("#admin_signup").submit(function (event) {
+  $("#admin_signup").submit(function (event) {
 
-      event.preventDefault();
-  
-      var email = $("#email").val();
-      var admin_id = $("#admin_id").val();
-      var password = $("#password").val();
-  
-        $.ajax({
-          method: "POST",
-          url: "http://localhost:3000/users",
-          data: {
-            email: email,
-            admin_id: admin_id,
-            password: password
-          },
-          success: function() {
-            window.location.assign(`adminDashboard.html?admin_id=${admin_id}`);
-          }
-        });
-  
-    })
-  
-  
-  
-    $("#admin_login").submit(function (event) {
-  
-      event.preventDefault();
-  
-          admin_id = $("#admin_id").val();
-      var password = $("#password").val();
-  
-        $.ajax({
-          method: "GET",
-          url: "http://localhost:3000/users",
-          dataType: "json",
-          data: {admin_id: admin_id, password: password },
-          success(res) {
-                   if (!res.length) {
-                return false
-            }
-            window.location.assign(`adminDashboard.html?admin_id=${admin_id}`);
-          }
-        });
-       
-      })
+    event.preventDefault();
 
-
-
-      $("#generate_transcript").submit(function (event) {
-
-        event.preventDefault();
-    
-    var student_id = $("#student_id").val();
-    var department = $("#dept").val();
     var email = $("#email").val();
-    
-          $.ajax({
-            method: "GET",
-            url: `http://localhost:3000/users`,
-            dataType: "json",
-            data: {student_id: student_id, department: department, email: email },
-            success(res) {
-                     if (!res.length) {
-                  return false
-              }
-              window.location.assign(`transcripts_table.html?id=${student_id}`);
-            }
-          });
-         
-        })
-  
+    var admin_id = $("#admin_id").val();
+    var password = $("#password").val();
+
+    $.ajax({
+      method: "POST",
+      url: "http://localhost:3000/users",
+      data: {
+        email: email,
+        admin_id: admin_id,
+        password: password
+      },
+      success: function () {
+        window.location.assign(`adminDashboard.html?admin_id=${admin_id}`);
+      }
+    });
+
+  })
+
+
+
+  $("#admin_login").submit(function (event) {
+
+    event.preventDefault();
+
+    admin_id = $("#admin_id").val();
+    var password = $("#password").val();
+
+    $.ajax({
+      method: "GET",
+      url: "http://localhost:3000/users",
+      dataType: "json",
+      data: { admin_id: admin_id, password: password },
+      success: function (res) {
+        if (!res.length) {
+          alert("Details do not match")
+        } else {
+          window.location.assign(`adminDashboard.html?admin_id=${admin_id}`);
+        }
+      }
+    });
+
+  })
 
 });

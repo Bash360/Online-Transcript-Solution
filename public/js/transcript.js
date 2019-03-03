@@ -1,18 +1,44 @@
-
 $(document).ready(function () {
 
+  $("#generate_transcript").submit(function (event) {
+
+    event.preventDefault();
+
+    student_id = $("#student_id").val();
+    department = $("#dept").val();
+    email = $("#email").val();
+
+    $.ajax({
+      method: "GET",
+      url: `http://localhost:3000/users`,
+      dataType: "json",
+      data: { student_id: student_id, department: department, email: email },
+      success: function (res) {
+        if (!res.length) {
+          alert("Details do not match")
+        } else {
+          localStorage.setItem("department", $("#dept").val());
+
+          return window.location.assign(`transcripts_table.html`);
+        }
+
+      }
+    });
+
+  })
 
 
+  let scores = [];
+  let unitTotal = [];
+  let dept = localStorage.getItem("department");
+  let courses = generateResult(dept);
+  let totalScores = calculateTotalPoints(scores);
+  let totalUnits = calculateTotalUnits(unitTotal);
 
-
-
-let scores = [];
-let unitTotal = [];
-
-var department = $("dept").val();
 
 
   function generateResult(department) {
+    alert(department);
     if (department == "CSC") {
       const courses = [];
       counter = 0;
@@ -42,54 +68,46 @@ var department = $("dept").val();
         counter++;
       }
 
-         courses.forEach(obj => {
+      courses.forEach(obj => {
         scores.push(Object.values(obj)[1]);
         unitTotal.push(Object.values(obj)[2]);
-    })
-
-
+      })
       return courses;
     }
-
   }
 
 
-function calculateTotalUnits(grades) {
+  function calculateTotalUnits(grades) {
+    let total = 0;
 
-  let total = 0;
+    grades.forEach(grade => {
 
-  grades.forEach( grade => {
-    
-    total+= grade
-})
+      total += grade
+    })
 
-  return total
-}
-
-
-function calculateTotalPoints(grades) {
-
-  let total = 0;
-
-  let points;
-
-  grades.forEach( grade => {
-    if (grade >= 70) points = 5;
-if (grade <= 69) points = 4;
-if (grade <= 59) points = 3;
-if (grade <= 49) points = 2;
-if (grade <= 39) points = 1;
-if (grade <= 29) points = 0;
-    
-    total+= points
-})
-
-  return total
-}
+    return total
+  }
 
 
+  function calculateTotalPoints(grades) {
+    let total = 0;
 
-  var courses = generateResult(deptartment);
+    let points;
+
+    grades.forEach(grade => {
+      if (grade >= 70) points = 5;
+      if (grade <= 69) points = 4;
+      if (grade <= 59) points = 3;
+      if (grade <= 49) points = 2;
+      if (grade <= 39) points = 1;
+      if (grade <= 29) points = 0;
+
+      total += points
+    })
+
+    return total
+  }
+
 
   var table = $("<table>");
 
@@ -123,17 +141,13 @@ if (grade <= 29) points = 0;
 
   th_data.appendTo(tr);
 
+
+
   var tbody = $("<tbody>");
-
-
-
-
-  
 
   tbody.appendTo(table);
 
-  var key = courses;
-  for (obj of key) {
+  for (obj of courses) {
 
     let tr = $("<tr>");
 
@@ -151,26 +165,13 @@ if (grade <= 29) points = 0;
 
     td_info.appendTo(tr);
 
-
-
     let td_data = $("<td>");
 
     td_data.text(Object.values(obj)[2])
 
     td_data.appendTo(tr);
 
-
-
-
-
-
-
-
   }
-
-
-
-
 
   var tfoot = $("<tfoot>");
 
@@ -182,30 +183,27 @@ if (grade <= 29) points = 0;
 
   tr.appendTo(tfoot);
 
-   var th_key = $("<th>");
+  var th_key = $("<th>");
 
-   var th_info = $("<th>");
+  var th_info = $("<th>");
 
-   var th_data = $("<th>");
+  var th_data = $("<th>");
 
-   th_key.text("TOTAL POINTS / UNITS");
+  th_key.text("TOTAL POINTS / UNITS");
 
-   let totalScores = calculateTotalPoints(scores)
+  th_info.text(totalScores);
 
-   let totalUnits = calculateTotalUnits(unitTotal)
+  th_data.text(totalUnits);
 
-   th_info.text(totalScores);
+  th_key.appendTo(tr);
 
-   th_data.text(totalUnits);
+  th_info.appendTo(tr);
 
-   th_key.appendTo(tr);
+  th_data.appendTo(tr);
 
-   th_info.appendTo(tr);
+  let CGPA = totalScores * 3 / totalUnits
+  let response = `Cummulative Grade Point Average (CGPA) is ${CGPA}`
 
-   th_data.appendTo(tr);
+  $("#cgpa").html(response);
 
-   let CGPA = totalScores*3/totalUnits
-   let response = `Cummulative Grade Point Average (CGPA) is ${CGPA}`
-
-   $("#cgpa").html(response);
 });
