@@ -6,18 +6,23 @@
   
   <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
 
-<!------ Include the above in your HEAD tag ---------->
 
-   <!--Made with love by Mutiullah Samim -->
-   
-	<!--Bootsrap 4 CDN-->
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     
-    <!--Fontawesome CDN-->
+ 
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
 
-	<!--Custom styles-->
 	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script>
+	if(!localStorage.getItem("admin-ID")){window.location='adminLogin.html';}
+	$(document).ready(function(){
+		$("#logout").click(function(){
+	localStorage.removeItem("admin-ID");
+	window.location='adminLogin.html';});
+	});
+
+	</script>
 </head>
 <body>
 
@@ -53,11 +58,11 @@
 						
 						<ul class="navbar-nav2 ml-auto">
 							<li class="dropdown">
-								<a href="#" class="dropdown-toggle" data-toggle="dropdown">Welcome John</a>
+								<a href="#" class="dropdown-toggle" data-toggle="dropdown">Welcome Admin</a>
 									<ul class="dropdown-menu">
 											<li class="resflset"><a href="profile.php"><i class="fa fa-fw fa-cog"></i> Edit profile</a></li>
 											<li class="divider"></li>
-											<li class="resflset"><a href="#"><i class="fa fa-fw fa-power-off"></i> Logout</a></li>
+											<li class="resflset"><button id="logout"><i class="fa fa-fw fa-power-off"></i> Logout</button></li>
 									</ul>
 							</li>
 						</ul>
