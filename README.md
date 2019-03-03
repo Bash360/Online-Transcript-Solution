@@ -1,12 +1,9 @@
-# Transcript
+# Deca-Transcript
 is an online transcript solution for the alumni of Decagon University to request for thier transcript online and have it sent to them electronically. The grades are fetched from the student's records history and his transcript is auto generated based on the university's grading system. A=5PTS B=4PTS C=3PTS D=2PTS E=1PTS F=0PTS
 
 
 # GITHUB REPO
-- https://github.com/wolfma360/Online-Transcript-Solution.git
-
-# HOSTING PAGES
-- https://deca-transcript.herokuapp.com
+- https://github.com/wolfma360/Online-Transcript-Solution
 
 
 #ENDPOINTS
@@ -35,3 +32,6 @@ is an online transcript solution for the alumni of Decagon University to request
 - run git clone https://github.com/wolfma360/Online-Transcript-Solution.git
 - run npm install
 - visit http://localhost:3000 on your browser
+
+# HOSTED PAGES
+- https://deca-transcript.herokuapp.com
