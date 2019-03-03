@@ -6,7 +6,7 @@ is an online transcript solution for the alumni of Decagon University to request
 - https://github.com/wolfma360/Online-Transcript-Solution.git
 
 # HOSTING PAGES
-- https://deca-transcript.herokuapps.com
+- https://deca-transcript.herokuapp.com
 
 
 #ENDPOINTS
