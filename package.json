@@ -2,20 +2,19 @@
   "name": "online-transcript-solution",
   "version": "1.0.0",
   "description": "An online transcript solution",
-  "main": "index.js",
+  "main": "db.json",
   "dependencies": {
-    "cross-env": "^5.2.0",
     "json-server": "^0.14.2"
   },
   "devDependencies": {},
   "scripts": {
-    "start": "json-server db.json"
+    "start": "json-server db.json --port 3000||process.env.PORT"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/wolfma360/Online-Transcript-Solution.git"
   },
-  "author": "",
+  "author": "Johnbosco & Bash",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/wolfma360/Online-Transcript-Solution/issues"
