@@ -1,4 +1,6 @@
-  $(document).ready(function () {
+const app = require("../../index");
+
+$(document).ready(function () {
 
     $("#generate_transcript").submit(function (event) {
 
@@ -10,7 +12,7 @@
 
       $.ajax({
         method: "GET",
-        url: `http://localhost:3000/users`,
+        url: `http://localhost:${PORT}/users`,
         dataType: "json",
         data: { student_id: student_id, department: department, email: email },
         success: function (res) {

@@ -1,3 +1,5 @@
+const server = require("../../index");
+
 
 $(document).ready(function () {
 
@@ -16,7 +18,7 @@ $(document).ready(function () {
 
     $.ajax({
       method: "POST",
-      url: "http://localhost:3000/users",
+      url: `http://localhost:${PORT}/users`,
       data: {
         fullname: fullname,
         email: email,
@@ -44,7 +46,7 @@ $(document).ready(function () {
 
     $.ajax({
       method: "GET",
-      url: `http://localhost:3000/users`,
+      url: `http://localhost:${PORT}/users`,
       dataType: "json",
       data: { student_id: student_id, password: password },
       success: function (res) {
@@ -70,7 +72,7 @@ $(document).ready(function () {
 
     $.ajax({
       method: "POST",
-      url: "http://localhost:3000/users",
+      url: `http://localhost:${PORT}/users`,
       data: {
         email: email,
         admin_id: admin_id,
@@ -94,7 +96,7 @@ $(document).ready(function () {
 
     $.ajax({
       method: "GET",
-      url: "http://localhost:3000/users",
+      url: `http://localhost:${PORT}/users`,
       dataType: "json",
       data: { admin_id: admin_id, password: password },
       success: function (res) {
