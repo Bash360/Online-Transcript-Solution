@@ -17,7 +17,7 @@ is an online transcript solution for the alumni of Decagon University to request
 # ADMIN ENDPOINTS
 - http://localhost:3000/admin.html
 - http://localhost:3000/admin_dashboard.html
-- http://localhost:3000/users (edited) 
+- http://localhost:3000/users
 
 # STACKS USED
 
